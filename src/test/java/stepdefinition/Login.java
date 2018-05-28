@@ -42,7 +42,7 @@ public class Login {
     
     @Then("^Check if still on login page and close browser$")
     public void check_if_still_on_login_page_and_close_browser() throws Throwable {
-    	Assertions.assertThrows(UnhandledAlertException.class, () -> {this.loginPage.isMainContainerVisible();}, "123");
+    	Assertions.assertThrows(UnhandledAlertException.class, () -> {this.loginPage.isMainContainerVisible();}, "Logged in with wrong credentials!");
     	this.loginPage.closeDriver();
     }
 
